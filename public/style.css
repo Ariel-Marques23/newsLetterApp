@@ -1,0 +1,55 @@
+input{
+    width: 95%;
+    margin: 20px 0px 20px 2.5%;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    padding: 0px;
+}
+.campoNoticia{
+    width: 95%;
+    margin: 20px 0px 20px 2.5%;
+    height: 35px;
+    border-radius: 10px;
+    height: 450px;
+    resize: none;
+    font-size: 30px;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    padding: 0px;
+}
+
+button{
+    width: 95%;
+    height: 50px;
+    margin: 20px 0px 20px 2.5%;
+    border: solid 1px black;
+    background-color: #7AA6FF;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+button:hover{
+    background-color: hsl(219, 100%, 82%);
+}
+
+h3{
+    margin: 20px 0px 5px 0px;
+    font-size: 28px;
+    text-align: center;
+}
+.center{
+    width: 60%;
+    margin-left: 19%;
+    margin-top: 0px;
+    background-color: #A0A6FA;
+    border-radius: 10px;
+}
+h1{
+    margin-top: 0px;
+    margin-left: 0%;
+    font-size: 35px;
+    text-align: center;
+}
