@@ -21,7 +21,7 @@ class News extends Model
     protected $fillable = [
         'title',
         'message',
-        'id_topic'
+        'topic_id'
     ];
 
     /**

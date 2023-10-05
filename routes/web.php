@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\NewsController;
+use App\Http\Controllers\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,5 @@ use app\Http\Controllers\NewsController;
 Route::get('/news',function(){
     return view("index");
 } );
+
+Route::post('/save-data', [NewsController::class, 'store']);

@@ -9,24 +9,28 @@
     </head>
         <body class="antialiased">
             <button class="collapsible square">Historico de noticias</button>
-            <div class="content">
-                <h4>Titulo:</h4>
-                <p>Noticia:</p>
-            </div>
-            <div class="center">
-                <div>
-                    <h1>Envio de noticias</h1>
-                </div>
-                <div>
-                <h3>Titulo:</h3>
-                    <input type="text" name="texto" id="">
 
-                    <h3>Noticia:</h3>
-                    <textarea name="" id="" cols="30" rows="10" class="campoNoticia"></textarea>
-
-                    <button class="button1">Enviar</button>
+            <form action="/save-data" method="post">
+            @csrf 
+                <div class="content">
+                    <h4>Titulo:</h4>
+                    <p>Noticia:</p>
                 </div>
-            </div>
+                <div class="center">
+                    <div>
+                        <h1>Envio de noticias</h1>
+                    </div>
+                    <div>
+                    <h3>Titulo:</h3>
+                        <input type="text" name="title" id="">
+
+                        <h3>Noticia:</h3>
+                        <textarea name="message" id="" cols="30" rows="10" class="campoNoticia"></textarea>
+
+                        <button class="button1" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </form>
 
                 <script>
                     var coll = document.getElementsByClassName("collapsible");

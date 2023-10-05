@@ -15,12 +15,9 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('topic_id');
-            $table->string('name');
+            $table->string('title');
             $table->longText('message');
             $table->timestamps();
-
-            $table->foreign('topic_id')->references('id')->on('topics');
         });
     }
 
