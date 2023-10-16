@@ -40,11 +40,12 @@ class NewsController extends Controller
             'message' => 'required',
         ]);
 
-        News::create([
+        $new = News::create([
             'title' => $request->input('title'),
             'message' => $request->input('message'),
         ]);
-        $this->show();
+        
+        return response()->json($new, 201);
     }
 
     /**
@@ -56,6 +57,6 @@ class NewsController extends Controller
     public function show()
     {
         $news = News::all();
-        return  response()->json($news);
+        return  response()->json($news, 200);
     }
 }
