@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\News;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class NewsController extends Controller
 {
@@ -58,5 +59,24 @@ class NewsController extends Controller
     {
         $news = News::all();
         return  response()->json($news, 200);
+    }
+
+    public function update(Request $request, int $id)
+    {
+        $new = News::find($id);
+        
+        if (empty($new)) {
+            throw new NotFoundHttpException('Nenhuma notícia com esse identificador foi encontrada.');
+        }
+
+        $new->update($request->only(['title', 'message']));
+
+        return response()->json($new, 200);
+    }
+
+    public function delete(int $id)
+    {
+        News::destroy($id);
+        return response()->noContent();
     }
 }
