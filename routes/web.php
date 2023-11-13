@@ -16,3 +16,5 @@ use App\Http\Controllers\NewsController;
 Route::get('/news',function(){
     return view("index");
 } );
+
+Route::post('/news', [NewsController::class, 'store']);

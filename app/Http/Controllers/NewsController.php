@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Kafka\Producer;
 use Illuminate\Http\Request;
 use App\Models\News;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -41,10 +42,19 @@ class NewsController extends Controller
             'message' => 'required',
         ]);
 
-        $new = News::create([
+        $newsData = [
             'title' => $request->input('title'),
             'message' => $request->input('message'),
-        ]);
+        ];
+
+        if(!$request->is('api/*')) {
+            $kafkaContent = json_encode($newsData);
+    
+            $kafkaProducer = new Producer();
+            $kafkaProducer->produce($kafkaContent);
+        }
+
+        $new = News::create($newsData);
         
         return response()->json($new, 201);
     }

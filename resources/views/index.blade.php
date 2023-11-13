@@ -10,7 +10,7 @@
         <body class="antialiased">
             <button class="collapsible square">Historico de noticias</button>
 
-            <form action="/save-data" method="post">
+            <form action="/news" method="post">
             @csrf 
                 <div class="content">
                     <h4>Titulo:</h4>
