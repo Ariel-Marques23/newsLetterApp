@@ -18,3 +18,7 @@ Route::get('/news',function(){
 } );
 
 Route::post('/news', [NewsController::class, 'store']);
+
+Route::fallback(function() {
+    return redirect('/news');
+});

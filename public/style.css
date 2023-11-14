@@ -1,64 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: "Poppins";
+}
+
 body{
-    background-color: rgb(243, 237, 237);
+    background-size: 500px 100%;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 0, 0.1), rgba(100, 100, 0, 0.1)), url("background.JPG");
 }
 input{
     width: 95%;
     margin: 20px 0px 20px 2.5%;
-    height: 35px;
-    border-radius: 10px;
+    height: 40px;
+    border: transparent;
+    border-bottom: 2px solid black;
     font-size: 25px;
-    background-color: rgb(245, 245, 245);
+    background: transparent;
     padding: 0px;
+
+}
+input:focus{
+    outline: none;
+    border-bottom: 2px solid black;
 }
 .campoNoticia{
-    width: 95%;
-    margin: 20px 0px 20px 2.5%;
+    width: 90%;
+    margin: 20px 0px 20px 4%;
     height: 35px;
     border-radius: 10px;
+    border: 1px solid black;
     height: 450px;
     resize: none;
     font-size: 30px;
-    background-color: rgb(245, 245, 245);
-    padding: 0px;
+    background-color: rgb(233, 233, 233);
+    padding-left: 15px;
+    box-shadow: 1px 6px 3px rgba(66,66,66,.49);
 }
 
 .button1{
     width: 95%;
     height: 50px;
     margin: 20px 0px 20px 2.5%;
-    border-radius: 10px;
-    border: solid 1px black;
-    background-color: #7AA6FF;
     font-size: 30px;
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    color: #fff;
+    background-color: #002d57;
+    padding: 10px 30px;
+    border: 2px solid black;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
 }
 
 .button1:hover{
+    transition : 1000ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    color: #0066cc;
+    border: solid 2px #0066cc;
     background-color: hsl(219, 100%, 82%);
 }
 
 h3{
     margin: 20px 0px 5px 2.5%;
-    font-size: 28px;
+    font-size: 35px;
+    color: black;
 }
 
 h1{
+
     margin-top: 0px;
     margin-left: 0%;
-    font-size: 35px;
+    font-size: 60px;
     text-align: center;
+    padding-bottom: 15px;
+    border-bottom: solid black 2px;
 }
 
 .center{
     width: 60%;
     margin-left: 19%;
     margin-top: 0px;
-    background-color: #A0A6FA;
+    background-color: #6a6d8f;
     border-radius: 10px;
     padding: 20px;
+    border: solid black 2px;
 }
 
 .collapsible{
-    background-color: #7AA6FF;
+    background-color: #6a6d8f;
     cursor: pointer;
     width: 100%;
     border: none;
